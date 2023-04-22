@@ -18,7 +18,7 @@
 
 ### Etapes à réaliser pour cloner un projet sur GitHub
 
-1. Cliquer et copier le lien HTTPS depuis "<code>"
+1. Cliquer et copier le lien HTTPS depuis "code"
    Ex : "https://github.com/Delgorithm/git-learning.git"
 
 2. Utiliser iTerm pour se rendre dans le dossier où on souhaite placer le projet GitHub
@@ -26,7 +26,7 @@
 
 3. Faire la commande :
 
-   ##### git clone <url>
+   - git clone "url"
 
    Ex : git clone https://github.com/Delgorithm/git-learning.git
 
@@ -34,4 +34,4 @@
 
 5. Coder le projet :
 
-   ##### code git-learning
+   - code git-learning
