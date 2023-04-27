@@ -1,20 +1,18 @@
-### Etapes à réaliser après avoir créer une Repo sur GitHub
+## Etapes à réaliser après avoir créer une Repo sur GitHub
 
-1. Ouvrir git et se rendre sur le dossier dans lequel se trouve notre projet
-2. git init
-3. Retourner en arrière avec : "cd .."
-4. Lancer la commande "code 'nom du dossier' " pour vérifier que tout est bien présent
-5. Retourner dans le dossier
-6. git status
-7. git add .
-8. git commit -m "V1.0"
-9. git remote add origin 'url du repo'
-10. git fetch origin
-11. git merge origin/main --allow-unrelated-histories
-12. git status
-13. git add .
-14. git commit -m "V1.0"
-15. git push origin main
+Ouvrir git et se rendre sur le dossier dans lequel se trouve notre projet
+
+- `git init`
+- `git status`
+- `git add .`
+- `git commit -m "V1.0"`
+- `git remote add origin 'url du repo'`
+- `git fetch origin`
+- `git merge origin/main --allow-unrelated-histories`
+- `git status`
+- `git add .`
+- `git commit -m ""`
+- `git push origin main`
 
 ### Etapes à réaliser pour cloner un projet sur GitHub
 
@@ -26,9 +24,9 @@
 
 3. Faire la commande :
 
-   - git clone "url"
+   - `git clone "url"`
 
-   Ex : git clone https://github.com/Delgorithm/git-learning.git
+   Ex : `git clone https://github.com/Delgorithm/git-learning.git`
 
 4. Rentrer dans le dossier pour vérifier si tout est bon. Puis sortir de celui-ci
 
@@ -36,4 +34,50 @@
 
    - code git-learning
 
-## Git branch
+## Tips and Tricks
+
+### Combine "add" & "commit
+
+A la place de faire :
+
+- `git add .`
+- `git commit -m "V1.0"`
+  On peut directement fusionner les 2 commandes d'un trait :
+
+Commande :
+
+- `git commit -am "V1.0"`
+
+### --amend
+
+Permet de modifier le dernier commit que l'on souhaite modifier
+Permet de :
+
+- Changer le message du commit
+- Ajouter/supprimer des fichiers du dernier commit
+- Modifier les contenus du dernier commit
+
+Commande :
+
+- `git commit --amend` (Permettra de modifier le dernier message)
+
+- `git commit --amend -a` (Permettra de modifier le contenu des fichiers du dernier commit)
+
+#### Point importants :
+
+- Nécessité de "`push`" avec la commande "git push --force" pour pouvoir appliquer les modifications obtenu via "`--amend`"
+- Si on a déjà partagé la branche avec d'autres utilisateurs, il est recommandé de ne pas utiliser cette commande, car elle peut causer des problèmes de fusion lorsqu'ils essaient de récupérer votre dernière version de la branche.
+
+## Pretty logs
+
+Pour obtenir un graphique représentant nos différents commits qui ont eu lieu :
+
+Commande :
+
+- `git log --graph --online --decorate`
+
+## Next tips to write about :
+
+- `git rebase`
+- `git init --bare`
+- `--force-with-lease`
